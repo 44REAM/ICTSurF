@@ -108,7 +108,7 @@ def nll_continuous_time_multi_loss_trapezoid(phis: Tensor, idx_durations_all: Te
         # log_h_e = log_softplus(phi.gather(1, idx_durations).view(-1)).mul(events)
         haz = F.softplus(phi)
         
-        filters = torch.tensor([[[1.,1.]]])
+        filters = torch.tensor([[[1.,1.]]]).to(phis.device)
         haz = F.conv1d(haz.reshape(n_sample, 1, n_time), filters).reshape(n_sample, n_time-1)
         haz = haz.mul(torch.diff(input_times)).div(2)
 
