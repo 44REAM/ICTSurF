@@ -178,3 +178,15 @@ surv = model.pred_to_surv(preds, test_loader)
 
 # then using survival probability for your evaluation
 ```
+
+## Citing and References
+
+```
+@article{PUTTANAWARUT2024101531,
+title = {ICTSurF: Implicit Continuous-Time Survival Functions with neural networks},
+journal = {Informatics in Medicine Unlocked},
+year = {2024},
+doi = {https://doi.org/10.1016/j.imu.2024.101531},
+author = {Chanon Puttanawarut and Panu Looareesuwan and Romen Samuel Wabina and Prut Saowaprut},
+}
+```
